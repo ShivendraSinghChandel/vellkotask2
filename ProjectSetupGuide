@@ -1,0 +1,95 @@
+Frontend (React) Setup:
+1. Prerequisites:
+
+Install Node.js (which includes npm) from https://nodejs.org.
+npm (Node Package Manager) comes with Node.js, so once you install Node.js, you should also have npm.
+
+2. Steps:
+
+
+ i. Extract the Project Folder:
+
+ Unzip the project folder you’ve sent and place it in a location of your choice on your machine.
+
+
+ ii. Install Dependencies:
+
+Open a terminal or command prompt and navigate to the frontend folder (where your package.json is located). If you’ve extracted the project to my-app, run:
+
+cd path/to/my-app
+
+
+ iii. Install the Node.js dependencies:
+
+Since the node_modules folder is not included in the zip file, you need to install the dependencies manually. Run the following command to install all necessary packages:
+
+npm install
+
+
+3. Start the Development Server:
+
+Once the dependencies are installed, you can start the React development server using:
+
+npm start
+This will run the React application on http://localhost:3000 by default, unless you configured a different port.
+
+
+
+Backend Setup (PHP)
+
+1. Prerequisites:
+
+XAMPP installed on your machine. You can download it from XAMPP website.
+MySQL service enabled via XAMPP for database management.
+
+2. Steps:
+ Set Up the Backend (PHP):
+
+ i. Extract the backend folder (e.g., backend) inside your htdocs folder in the XAMPP directory (e.g.,   C:\xampp\htdocs). Your directory structure should look something like this:
+
+ C:\xampp\htdocs\backend\
+
+ ii. Create the Database in MySQL:
+
+ Open phpMyAdmin by navigating to http://localhost/phpmyadmin in your browser.
+
+ Create a new database called multistep_form (or any name you choose, but make sure it matches the PHP file).
+
+ Create a table inside this database called form_data with columns for all the form fields:
+
+ CREATE TABLE form_data (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    zip_code VARCHAR(5),
+    service_type VARCHAR(255),
+    roof_action VARCHAR(255),
+    location_type VARCHAR(255),
+    timing VARCHAR(255),
+    description TEXT,
+    street_address VARCHAR(255),
+    city VARCHAR(255),
+    state VARCHAR(255),
+    first_name VARCHAR(255),
+    last_name VARCHAR(255),
+    email VARCHAR(255),
+    phone_number VARCHAR(10)
+);
+
+iii. Edit PHP Files to Connect to Database:
+
+ In the PHP file (submit-form.php), make sure to update the database credentials (username, password) as required by your MySQL setup. For example:
+
+ $servername = "localhost";  
+ $username = "root";         
+ $password = "";  // Set your password here if it's not the default empty one
+ $dbname = "multistep_form";
+
+
+3. Start XAMPP Services:
+
+Open the XAMPP Control Panel and start the Apache and MySQL services. These will handle your PHP and MySQL requests.
+
+4. Verify PHP Backend:
+
+Once the services are running, you can access your PHP script by visiting:
+
+http://localhost/backend/submit-form.php

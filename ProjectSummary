@@ -1,0 +1,16 @@
+Overview:
+This project involves a multi-step form application built with React on the frontend and a PHP backend, designed to gather user information across several steps and submit it to a MySQL database via AJAX. The application ensures a smooth user experience with real-time form validation, progress indicators, and seamless data submission, all while managing CORS for cross-origin requests between the React frontend and PHP backend.
+
+Key Features:
+
+Multi-Step Form: The form captures various user details step by step, including zip code, service type, roof action, location type, timing, project description, address, name, email, phone number, and terms acceptance.
+
+Real-Time Validation: Each step validates user inputs, displaying error messages for invalid fields and ensuring data completeness before proceeding.
+
+Progress Indicator: A progress bar or numbered steps shows the user’s current step, enhancing the UX.
+
+Seamless Submission: Form data is submitted using AJAX, preventing page reloads and providing a smoother experience.
+
+CORS Handling: The backend is configured to handle cross-origin requests, enabling the frontend to interact with the PHP backend running on different ports.
+
+Database Integration: The form data is stored in a MySQL database using PHP, ensuring persistence for future use.
